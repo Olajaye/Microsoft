@@ -1,0 +1,161 @@
+@use'../custom' as*;
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+/*-----Navigation----*/
+
+
+.navbar-brand img {
+  width: 110px;
+}
+
+.navbar {
+  margin-bottom: 2px solid black;
+}
+
+a {
+  color: black;
+}
+
+.nav-link {
+  font-size: .8rem;
+  color: black;
+  position: relative;
+}
+
+.line::after {
+  content: '';
+  width: 0;
+  height: 2px;
+  background-color: black;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 8px;
+}
+
+
+.line:hover::after {
+  width: 100%;
+
+}
+
+/*-----------------items-----*/
+.items a {
+  color: blue;
+  font-weight: 600;
+  
+}
+
+
+/*----------carousel------*/
+#carousels {
+  margin-top: 0px;
+}
+
+.carousel-inner {
+  overflow: visible;
+}
+
+.carousel-caption {
+  position: absolute;
+  top: 170px;
+  left: 90px;
+
+  h2 {
+    @include media-breakpoint-down(lg) {
+      font-size: 1.2rem;
+    }
+
+  }
+
+  p {
+    @include media-breakpoint-down(lg) {
+      font-size: 1rem;
+    }
+  }
+
+  @include media-breakpoint-down(lg) {
+    background-color: white;
+    padding: 4rem;
+    box-shadow: 1px 2px 7px 1px rgb(0, 0, 0, 0.1);
+    position: relative;
+    top: -30px;
+    left: 9%;
+  }
+
+  @include media-breakpoint-down(md) {
+    background-color: white;
+    padding: 4rem;
+    box-shadow: none;
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+}
+
+// 
+
+/*------------card-------*/
+.card-icon a {
+  color: blue;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/*-------ads--------*/
+.ads-text {
+  position: absolute;
+  right: 10px;
+  top: 180px;
+
+  @include media-breakpoint-down(lg) {
+    background-color: white;
+    padding: 4rem;
+    position: relative;
+    top: 0px;
+    left: 0;
+
+
+
+  }
+}
+
+/*--------------busniss-----*/
+.business {
+  margin-top: 100px;
+}
+
+
+
+.top-col {
+  background-color: $gray-200;
+}
+
+#footer {
+  background-color: $gray-200;
+}
+
+.foot a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.foot a :hover {
+  text-decoration: underline;
+}
+
+
+
+.list-group-item {
+  font-size: .8rem;
+}
+
+.location {
+  font-size: .8rem;
+}
